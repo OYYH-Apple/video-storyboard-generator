@@ -1,0 +1,45 @@
+# 不同视频类型的配置
+
+# 技术教程视频 - 适合技术讲解、概念演示
+tech_tutorial:
+  visual_style: "科技风（深蓝+粒子+神经网络）"
+  character: "拟人化AI机器人"
+  narration_style: "专业权威型"
+  camera_rhythm: "中等节奏"
+  background_style: "深蓝渐变 + 神经网络线条流动 + 微光粒子"
+  main_color: "蓝色"
+  segments_type: "概念-机制-应用模式"
+  shots_per_segment: [3, 3, 4, 3, 2]
+
+# 产品推广视频 - 适合产品介绍、版本更新
+product_promo:
+  visual_style: "活泼轻松（明亮色彩+卡通元素）"
+  character: "产品吉祥物"
+  narration_style: "风趣调侃型"
+  camera_rhythm: "快速动感"
+  background_style: "明亮色彩 + 卡通元素 + 活泼背景粒子"
+  main_color: "橙色"
+  segments_type: "问题-解决方案模式"
+  shots_per_segment: [2, 3, 3, 2, 2]
+
+# 故事讲述视频 - 适合品牌故事、用户案例
+story_telling:
+  visual_style: "温暖柔和（渐变色彩+情感化）"
+  character: "角色人物"
+  narration_style: "亲和教学型"
+  camera_rhythm: "缓慢优雅"
+  background_style: "温暖柔和渐变 + 情感化元素"
+  main_color: "暖金色"
+  segments_type: "故事驱动模式"
+  shots_per_segment: [3, 3, 4, 3, 2]
+
+# 数据洞察视频 - 适合分析报告、趋势展示
+data_insight:
+  visual_style: "严肃专业（简洁+数据可视化）"
+  character: null  # 无角色，抽象图形为主
+  narration_style: "专业权威型"
+  camera_rhythm: "混合节奏"
+  background_style: "深蓝科技背景 + 电路板线条 + 数据流动"
+  main_color: "深青色"
+  segments_type: "数据-洞察模式"
+  shots_per_segment: [2, 3, 2, 3, 2]

@@ -1,0 +1,36 @@
+# Video Storyboard Generator 默认配置文件
+
+# 视频总体设置
+video:
+  fps: 30
+  default_duration: 60
+  output_format: "markdown"  # markdown, json, yaml
+
+# 默认视觉风格
+visual:
+  background_style: "深蓝渐变 + 神经网络线条流动 + 微光粒子"
+  main_color: "蓝色"
+  code_highlight: "专业"
+
+# 默认旁白设置
+narration:
+  voice: "成熟中文男声"
+  style: "专业自信 + 偶尔风趣"
+  auto_subtitle: true
+
+# 默认运镜设置
+camera:
+  default_rhythm: "快而流畅"
+  transition_duration: 0.5
+
+# 输出设置
+output:
+  directory: "./docs"
+  filename_pattern: "{title}_storyboard.{extension}"
+  create_directory: true
+
+# 镜头序列设置
+shots:
+  min_per_segment: 2
+  max_per_segment: 4
+  default_shot_duration: 4
