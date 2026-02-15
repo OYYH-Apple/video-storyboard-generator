@@ -1,5 +1,7 @@
 # 不同视频类型的配置
 
+# ==================== 概念讲解类 ====================
+
 # 技术教程视频 - 适合技术讲解、概念演示
 tech_tutorial:
   visual_style: "科技风（深蓝+粒子+神经网络）"
@@ -10,6 +12,99 @@ tech_tutorial:
   main_color: "蓝色"
   segments_type: "概念-机制-应用模式"
   shots_per_segment: [3, 3, 4, 3, 2]
+  max_shot_duration: 12
+
+# 概念科普视频 - 适合科普内容、入门讲解
+concept_intro:
+  visual_style: "活泼轻松（明亮色彩+卡通元素）"
+  character: "拟人化科普角色"
+  narration_style: "亲和教学型"
+  camera_rhythm: "中等节奏"
+  background_style: "明亮渐变 + 几何图形 + 轻松粒子"
+  main_color: "绿色"
+  segments_type: "概念-机制-应用模式"
+  shots_per_segment: [2, 3, 3, 2, 2]
+  max_shot_duration: 12
+
+# ==================== 书籍介绍类 ====================
+
+# 书籍概览 - 整书推荐、书评
+book_overview:
+  visual_style: "文艺温暖（柔和色调+情感元素）"
+  character: "书籍精灵/阅读者形象"
+  narration_style: "亲和教学型"
+  camera_rhythm: "缓慢优雅"
+  background_style: "温暖渐变 + 书页纹理 + 知识粒子"
+  main_color: "暖金色"
+  segments_type: "整书概览模式"
+  shots_per_segment: [2, 3, 4, 3, 2, 2]
+  max_shot_duration: 15
+
+# 章节导读 - 单章节深入解读
+chapter_guide:
+  visual_style: "专业学术（简洁+结构清晰）"
+  character: "导师形象"
+  narration_style: "专业权威型"
+  camera_rhythm: "中等节奏"
+  background_style: "浅色背景 + 知识图谱 + 重点标注"
+  main_color: "深青色"
+  segments_type: "章节导读模式"
+  shots_per_segment: [2, 3, 3, 4, 3, 2]
+  max_shot_duration: 12
+
+# ==================== 热点评论类 ====================
+
+# 事件分析 - 新闻解读、深度评论
+event_analysis:
+  visual_style: "严肃专业（简洁+数据可视化）"
+  character: null
+  narration_style: "专业权威型"
+  camera_rhythm: "混合节奏"
+  background_style: "深色科技背景 + 数据流动 + 关键词云"
+  main_color: "深青色"
+  segments_type: "事件分析模式"
+  shots_per_segment: [2, 3, 4, 4, 3, 2]
+  max_shot_duration: 12
+
+# 观点表达 - 短观点、争议话题
+opinion_piece:
+  visual_style: "个人风格（根据话题调整）"
+  character: "评论者形象/无"
+  narration_style: "风趣调侃型"
+  camera_rhythm: "快速动感"
+  background_style: "动态背景 + 观点标签 + 情绪元素"
+  main_color: "橙色"
+  segments_type: "观点表达模式"
+  shots_per_segment: [2, 4, 3, 2, 2]
+  max_shot_duration: 10
+
+# ==================== 剧情分镜类 ====================
+
+# 故事叙述 - 短片分镜、动画脚本
+story_narrative:
+  visual_style: "电影质感（根据剧情调整）"
+  character: "故事角色"
+  narration_style: "叙事型"
+  camera_rhythm: "跟随情绪"
+  background_style: "场景化背景 + 情绪氛围 + 动态光影"
+  main_color: "根据场景"
+  segments_type: "故事叙述模式"
+  shots_per_segment: [2, 3, 4, 4, 3, 2]
+  max_shot_duration: 15
+
+# 情感短片 - 品牌故事、公益广告
+emotional_short:
+  visual_style: "文艺温暖（柔和色调+情感元素）"
+  character: "情感载体角色"
+  narration_style: "情感叙事型"
+  camera_rhythm: "缓慢优雅"
+  background_style: "温暖色调 + 情感元素 + 隐喻画面"
+  main_color: "暖金色"
+  segments_type: "情感短片模式"
+  shots_per_segment: [2, 3, 4, 3, 2]
+  max_shot_duration: 15
+
+# ==================== 产品介绍类 ====================
 
 # 产品推广视频 - 适合产品介绍、版本更新
 product_promo:
@@ -19,27 +114,58 @@ product_promo:
   camera_rhythm: "快速动感"
   background_style: "明亮色彩 + 卡通元素 + 活泼背景粒子"
   main_color: "橙色"
-  segments_type: "问题-解决方案模式"
-  shots_per_segment: [2, 3, 3, 2, 2]
+  segments_type: "产品发布模式"
+  shots_per_segment: [2, 3, 4, 3, 3, 2]
+  max_shot_duration: 12
 
-# 故事讲述视频 - 适合品牌故事、用户案例
-story_telling:
-  visual_style: "温暖柔和（渐变色彩+情感化）"
-  character: "角色人物"
+# 功能演示 - 操作教程、使用指南
+feature_demo:
+  visual_style: "简洁专业（清晰+步骤明确）"
+  character: null
   narration_style: "亲和教学型"
-  camera_rhythm: "缓慢优雅"
-  background_style: "温暖柔和渐变 + 情感化元素"
-  main_color: "暖金色"
-  segments_type: "故事驱动模式"
-  shots_per_segment: [3, 3, 4, 3, 2]
+  camera_rhythm: "中等节奏"
+  background_style: "浅色背景 + 操作提示 + 流程箭头"
+  main_color: "蓝色"
+  segments_type: "教程演示模式"
+  shots_per_segment: [2, 2, 5, 3, 2, 2]
+  max_shot_duration: 10
 
-# 数据洞察视频 - 适合分析报告、趋势展示
+# ==================== 数据报告类 ====================
+
+# 数据洞察 - 数据分析、研究报告
 data_insight:
   visual_style: "严肃专业（简洁+数据可视化）"
-  character: null  # 无角色，抽象图形为主
+  character: null
   narration_style: "专业权威型"
   camera_rhythm: "混合节奏"
   background_style: "深蓝科技背景 + 电路板线条 + 数据流动"
   main_color: "深青色"
-  segments_type: "数据-洞察模式"
-  shots_per_segment: [2, 3, 2, 3, 2]
+  segments_type: "数据洞察模式"
+  shots_per_segment: [2, 3, 3, 3, 4, 2]
+  max_shot_duration: 15
+
+# 对比分析 - 竞品对比、版本对比
+comparison:
+  visual_style: "客观中立（对比色+清晰标注）"
+  character: null
+  narration_style: "专业权威型"
+  camera_rhythm: "中等节奏"
+  background_style: "中性背景 + 分屏对比 + 数据标注"
+  main_color: "中性灰"
+  segments_type: "对比分析模式"
+  shots_per_segment: [2, 2, 5, 3, 3]
+  max_shot_duration: 12
+
+# ==================== 教程指南类 ====================
+
+# 操作指南 - 步骤教程、操作说明
+tutorial:
+  visual_style: "清晰友好（明亮色彩+步骤标注）"
+  character: "引导者形象"
+  narration_style: "亲和教学型"
+  camera_rhythm: "中等节奏"
+  background_style: "浅色背景 + 步骤编号 + 提示框"
+  main_color: "绿色"
+  segments_type: "教程演示模式"
+  shots_per_segment: [2, 2, 5, 3, 2, 2]
+  max_shot_duration: 10
