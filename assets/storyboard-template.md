@@ -76,6 +76,7 @@
 | {{USER_PREFERRED_RHYTHM}} | 用户偏好节奏 | "快速动感" |
 | {{SHOT_TIME_LIMIT}} | 单镜头时长上限（秒） | 15（默认值，可自定义） |
 | {{SEGMENTS}} | 分镜段落内容 | 多个段落的具体描述 |
+| {{SHOT_NARRATION}} | 单个镜头的旁白/台词 | 该镜头对应的解说词或角色台词 |
 | {{SHOT_BREAKDOWN_TABLE}} | 镜头拆分表 | 段落拆分统计 |
 | {{TECH_PROMPT_PREFIX}} | 技术提示前缀 | "remotion-best-practices" |
 | {{CAMERA_MOVEMENTS}} | 运镜类型列表 | "推近、环绕、跟拍、摇移、拉远" |
@@ -96,7 +97,7 @@
 {{SHOTS_SEQUENCE}}
 ```
 
-**旁白**："{{NARRATION_CONTENT}}"
+**注意：** 每个镜头的旁白/台词直接放在该镜头后面，方便对应查看。
 
 ---
 
@@ -108,6 +109,7 @@
 - 布局：{{SHOT_LAYOUT}}
 - 视觉：{{SHOT_VISUAL}}
 - 过渡：{{SHOT_TRANSITION}}
+- 旁白：{{SHOT_NARRATION}}
 ```
 
 ---
@@ -138,6 +140,7 @@
 - [ ] 需要主角/吉祥物吗？
 - [ ] 旁白风格确定了吗？
 - [ ] 旁白/台词呈现方式确定了吗？
+- [ ] 每个镜头是否有对应的旁白/台词？
 - [ ] 运镜节奏偏好？
 - [ ] 段落结构根据主题设计好了吗？
 - [ ] 需要音效/BGM建议吗？
