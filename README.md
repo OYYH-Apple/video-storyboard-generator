@@ -1,6 +1,6 @@
 # Video Storyboard Generator
 
-> 🎬 **Claude Skill** - 通用视频分镜脚本生成器，支持头脑风暴需求澄清、用户画像记忆、15秒镜头拆分规则。
+> 🎬 **Claude Skill** - 通用视频分镜脚本生成器，支持头脑风暴、用户偏好记忆、15秒镜头规则、角色提示词生成、音效/BGM建议、极简版/专业版双模式。
 
 ---
 
@@ -42,6 +42,51 @@
 
 每个段落包含多个独立镜头，精确控制视频节奏：
 
+### 5. 角色提示词生成（故事/剧情类）
+
+为故事类、电影类视频自动生成 AI 绘画提示词：
+
+**包含内容：**
+- 角色外貌特征（年龄、性别、衣着）
+- 风格描述（写实、卡通、电影风格）
+- 质量和参数标签（8k、4k、比例）
+- 支持 Midjourney、Stable Diffusion、DALL-E
+
+**适用场景：**
+- 剧情分镜、故事叙述
+- 短片分镜、动画脚本
+- 品牌故事、情感短片
+
+### 6. 音效/BGM 建议
+
+为每个镜头提供配套的音效和背景音乐建议：
+
+**音效类型：**
+- 环境音（雨声、风声、城市噪音）
+- 转场音效（swoosh、glitch、fade）
+- 强调音效（click、ding、pop）
+
+**BGM 建议：**
+- 音乐类型（电子、古典、流行、氛围）
+- 节奏和情绪（紧张、轻松、激昂）
+- 音量建议（根据内容类型调整）
+
+### 7. 双模式输出
+
+**极简版：**
+- 仅包含画面内容和时间描述
+- 简洁易读，快速规划
+- 适合初步构思和头脑风暴
+
+**专业版：**
+- 详细运镜指导（运镜类型、速度、方向）
+- 画面布局规范（元素位置、占比）
+- 视觉元素说明（具体元素描述）
+- 过渡效果（镜头间过渡）
+- 音效/BGM 建议（可选）
+- 角色提示词（故事/剧情类）
+- OpenCode 执行提示词（可直接复制）
+
 ```markdown
 段落1：开场引入（0-12秒）
 
@@ -71,9 +116,7 @@
 
 ## 🚀 如何使用
 
-### ⭐ 方式 1: 通过 Claude Skill（推荐）
-
-**无需安装，直接在 Claude 对话中使用：**
+**直接在 Claude 对话中使用：**
 
 ```
 我想做一个[你的视频主题]的分镜脚本
@@ -108,40 +151,25 @@ Claude：好的，让我确认几个问题：
 
 ---
 
-### 🔧 方式 2: 使用 CLI 工具
-
-适用于批量生成、自动化集成、JSON/YAML 导出：
-
-```bash
-cd scripts
-pip install -r requirements.txt
-python cli.py interactive
-```
-
-详见：[CLI 使用指南](scripts/INSTALL.md)
-
----
-
 ## 📂 项目结构
 
 ```
 video-storyboard-generator/
-├── SKILL.md                    # Skill 核心文档
-├── README.md                   # 本文件
-├── config/                     # 配置文件
-│   ├── default-config.yaml         # 默认配置
-│   └── video-types.yaml            # 14种视频类型配置
-├── references/                 # 参考文档
-│   ├── camera-movements.md     # 运镜类型参考
-│   ├── story-patterns.md       # 12种叙事模式
-│   └── user-profile.md         # 用户画像机制
-├── assets/                     # 模板资产
-│   └── storyboard-template.md  # 分镜模板
-├── scripts/                    # 脚本文件
-│   ├── cli.py                      # CLI 应用
-│   ├── export.py                   # 导出模块
-│   └── generate_storyboard.py      # 核心生成器
-└── examples/                   # 示例输出
+├── SKILL.md                       # Skill 核心文档
+├── README.md                      # 本文件
+├── LICENSE                        # 许可证
+├── config/                        # 配置文件
+│   ├── default-config.yaml        # 默认配置
+│   └── video-types.yaml           # 14种视频类型配置
+├── references/                    # 参考文档
+│   ├── camera-movements.md        # 运镜类型参考
+│   ├── story-patterns.md          # 12种叙事模式
+│   ├── character-prompts.md       # 角色提示词生成指南
+│   ├── audio-bgm.md               # 音效和BGM建议指南
+│   ├── user-profile.md            # 用户画像机制
+│   └── output-templates.md        # 输出格式模板
+└── assets/                        # 模板资产
+    └── storyboard-template.md     # 分镜模板
 ```
 
 ---
@@ -270,30 +298,15 @@ output:
 
 ---
 
-## 🛠️ CLI 命令
-
-```bash
-# 交互式生成
-python cli.py interactive
-
-# 命令行生成
-python cli.py generate --title "标题" --duration 60 --video-type book_overview
-
-# 批量生成
-python cli.py batch config.yaml
-
-# 格式转换
-python cli.py convert --input input.md --format json
-```
-
----
-
 ## 📚 参考文档
 
 - [SKILL.md](SKILL.md) - Skill 核心文档
 - [运镜类型参考](references/camera-movements.md) - 完整运镜技术说明
 - [叙事模式参考](references/story-patterns.md) - 12种叙事模式
+- [角色提示词生成指南](references/character-prompts.md) - 故事类角色提示词
+- [音效和BGM建议指南](references/audio-bgm.md) - 音效和背景音乐建议
 - [用户画像机制](references/user-profile.md) - 画像结构与更新规则
+- [输出格式模板](references/output-templates.md) - 极简版和专业版模板
 
 ---
 
