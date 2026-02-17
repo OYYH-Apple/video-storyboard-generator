@@ -78,6 +78,7 @@
 | {{SEGMENTS}} | 分镜段落内容 | 多个段落的具体描述 |
 | {{SHOT_NARRATION}} | 单个镜头的旁白/台词 | 该镜头对应的解说词或角色台词 |
 | {{SHOT_BREAKDOWN_TABLE}} | 镜头拆分表 | 段落拆分统计 |
+| {{SEEDANCE_PROMPT}} | Seedance 2.0提示词 | 每个镜头的AI视频生成提示词 |
 | {{TECH_PROMPT_PREFIX}} | 技术提示前缀 | "remotion-best-practices" |
 | {{CAMERA_MOVEMENTS}} | 运镜类型列表 | "推近、环绕、跟拍、摇移、拉远" |
 | {{RHYTHM}} | 节奏描述 | "快而流畅" |
@@ -145,6 +146,7 @@
 - [ ] 段落结构根据主题设计好了吗？
 - [ ] 需要音效/BGM建议吗？
 - [ ] 需要生成OpenCode提示词吗？（专业版）
+- [ ] 需要生成Seedance 2.0提示词吗？
 - [ ] 故事类视频的角色设定确定了吗？
 - [ ] 角色提示词比例确定了吗？（默认9:16）
 - [ ] 所有镜头时长≤设定的上限？
