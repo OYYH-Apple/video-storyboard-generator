@@ -6,7 +6,10 @@
 
 ## 画像文件结构
 
-**存储位置：** `~/.video-storyboard/user-profile.md`
+**存储位置：** 
+- **Windows**: `C:\Users\[用户名]\.video-storyboard\user-profile.md`
+- **macOS/Linux**: `~/.video-storyboard/user-profile.md`
+- **统一表示**: `<用户主目录>/.video-storyboard/user-profile.md`
 
 ```markdown
 # 用户画像
@@ -189,7 +192,9 @@
 
 用户可通过以下方式重置画像：
 
-1. 删除画像文件：`rm ~/.video-storyboard/user-profile.md`
+1. 删除画像文件：
+   - Windows: 删除 `C:\Users\[用户名]\.video-storyboard\user-profile.md`
+   - macOS/Linux: 运行 `rm ~/.video-storyboard/user-profile.md`
 2. 在对话中请求重置："重置我的偏好设置"
 
 重置后，系统将从空白画像重新开始学习。
@@ -234,9 +239,13 @@
 ### 读取画像伪代码
 
 ```python
+import os
+
 def load_user_profile():
-    profile_path = "~/.video-storyboard/user-profile.md"
-    if not exists(profile_path):
+    # 跨平台获取用户主目录
+    home = os.path.expanduser("~")
+    profile_path = os.path.join(home, ".video-storyboard", "user-profile.md")
+    if not os.path.exists(profile_path):
         return create_empty_profile()
     
     profile = parse_markdown(profile_path)
